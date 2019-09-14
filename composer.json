@@ -1,0 +1,14 @@
+{
+  "name": "kapusj01/design_patterns",
+  "authors": [
+    {
+      "name": "Jakub Kapuscik",
+      "email": "j.kapuscik2@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1.0",
+    "phpunit/phpunit": "^7.5",
+    "microsoft/windowsazure": "^0.5.7"
+  }
+}
