@@ -4,11 +4,11 @@ namespace creational\factory_method;
 
 abstract class Box {
 
-	protected $file;
+    protected $file;
 
-	public function __construct (FileItem $file) {
-		$this->file = $file;
-	}
+    public function __construct (FileItem $file) {
+        $this->file = $file;
+    }
 
-	abstract function getHtml (): string;
+    abstract function getHtml (): string;
 }

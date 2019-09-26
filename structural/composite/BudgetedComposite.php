@@ -6,9 +6,9 @@ use SplObjectStorage;
 
 interface BudgetedComposite extends Budgeted {
 
-	public function calculateBudget (): int;
+    public function calculateBudget (): int;
 
-	public function getDependent (): SplObjectStorage;
+    public function getDependent (): SplObjectStorage;
 
-	public function addDependent (Budgeted $item): void;
+    public function addDependent (Budgeted $item): void;
 }

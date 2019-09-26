@@ -4,18 +4,18 @@ namespace structural\bridge;
 
 class Standard extends Display {
 
-	public function render (): string {
+    public function render (): string {
 
-		$html = $this->content->getHtml();
-		$css = $this->content->getCss();
+        $html = $this->content->getHtml();
+        $css = $this->content->getCss();
 
-		return <<<CONTENT
+        return <<<CONTENT
 			$html;
 			
 			<style>
 				$css	
 			</style>
 CONTENT;
-	}
+    }
 
 }

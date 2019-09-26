@@ -25,8 +25,8 @@ $ceo->removeSubordinate($jan);
 showTeam($ceo);
 
 function showTeam ($users) {
-	foreach ($users as $user) {
-		echo $user->getPosition() . ": " . $user->getName() . PHP_EOL;
-	}
-	echo "Number of subordinates of " . $users->getName() . ": " . count($users) . PHP_EOL;
+    foreach ($users as $user) {
+        echo $user->getPosition() . ": " . $user->getName() . PHP_EOL;
+    }
+    echo "Number of subordinates of " . $users->getName() . ": " . count($users) . PHP_EOL;
 }

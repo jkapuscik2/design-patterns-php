@@ -4,7 +4,7 @@ namespace structural\bridge;
 
 class Blurred extends Display {
 
-	private $blurredRules = <<<CSS
+    private $blurredRules = <<<CSS
 		.content {
 			filter: blur(5px);
 		  	-webkit-filter: blur(5px);
@@ -12,12 +12,12 @@ class Blurred extends Display {
 CSS;
 
 
-	public function render (): string {
+    public function render (): string {
 
-		$html = $this->content->getHtml();
-		$css = $this->content->getCss();
+        $html = $this->content->getHtml();
+        $css = $this->content->getCss();
 
-		return <<<CONTENT
+        return <<<CONTENT
 			$html;
 			
 			<style>
@@ -25,5 +25,5 @@ CSS;
 				$this->blurredRules
 			</style>
 CONTENT;
-	}
+    }
 }

@@ -4,12 +4,12 @@ namespace structural\bridge;
 
 abstract class Display {
 
-	protected $content;
+    protected $content;
 
-	public function __construct (Content $content) {
-		$this->content = $content;
-	}
+    public function __construct (Content $content) {
+        $this->content = $content;
+    }
 
-	abstract public function render() : string;
+    abstract public function render (): string;
 
 }

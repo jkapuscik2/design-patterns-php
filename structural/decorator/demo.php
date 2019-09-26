@@ -8,7 +8,7 @@ $shirt = new Shirt(10, "Blue shirt BLD220");
 $tv = new TV(500, "LG 42'");
 
 echo($shirt->getName() . PHP_EOL);
-echo($tv->getName()) . PHP_EOL;
+echo ($tv->getName()) . PHP_EOL;
 
 $winterShirt = new WinterSale($shirt);
 $winterTv = new WinterSale($tv);

@@ -4,8 +4,8 @@ namespace creational\abstract_factory;
 
 interface OutdoorProduct {
 
-	public function testForWeatherConditions (): void;
+    public function testForWeatherConditions (): void;
 
-	public function testForVandalism (): void;
+    public function testForVandalism (): void;
 
 }

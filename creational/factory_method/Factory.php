@@ -3,5 +3,5 @@
 namespace creational\factory_method;
 
 interface Factory {
-	public static function createBox (FileItem $item): Box;
+    public static function createBox (FileItem $item): Box;
 }

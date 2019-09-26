@@ -4,8 +4,8 @@ namespace structural\bridge;
 
 class Video extends Content {
 
-	public function getCss (): string {
-		return <<<VID
+    public function getCss (): string {
+        return <<<VID
 		.content {
 			width: 100%; 
 		}
@@ -13,9 +13,9 @@ class Video extends Content {
             display: none;
 		}
 VID;
-	}
+    }
 
-	public function getHtml (): string {
-		return "<video class='content' src='$this->filePath' autoplay muted loop></video>";
-	}
+    public function getHtml (): string {
+        return "<video class='content' src='$this->filePath' autoplay muted loop></video>";
+    }
 }
