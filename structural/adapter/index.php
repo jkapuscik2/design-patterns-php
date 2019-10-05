@@ -29,7 +29,7 @@ if (array_key_exists("fileName", $_POST)
     } elseif (strtolower($_POST['action']) === 'delete') {
         try {
             $client->delete($_POST['fileName']);
-            $msg = "File '{$_POST['fileName']}' delete from storage '{$_POST['storage']}'";
+            $msg = "File '{$_POST['fileName']}' deleted from storage '{$_POST['storage']}'";
         } catch (\Exception $e) {
             $msg = $e->getMessage();
         }
@@ -162,5 +162,12 @@ if (sizeof($_FILES) && array_key_exists("storage", $_POST)) {
     <?php endif; ?>
 </div>
 
+
+<script>
+    $('#file').on('change',function(e){
+        var fileName = e.target.files[0].name;
+        $(this).next('.custom-file-label').html(fileName);
+    })
+</script>
 </body>
 </html>
