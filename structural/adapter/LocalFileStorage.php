@@ -4,23 +4,23 @@ namespace structural\adapter;
 
 class LocalFileStorage implements FileAdapter {
 
-    const STORAGE_PATH = "structural" . DIRECTORY_SEPARATOR . "adapter" . DIRECTORY_SEPARATOR . "storage" . DIRECTORY_SEPARATOR;
+    const STORAGE_PATH = "storage" . DIRECTORY_SEPARATOR;
 
-    public function get (string $path): File {
-        $fullPath = STORAGE_PATH . $path;
+    public function get (string $name): File {
+        $fullPath = self::STORAGE_PATH . $name;
 
         if (file_exists($fullPath)) {
-            return new File($path, file_get_contents($fullPath));
+            return new File($name, file_get_contents($fullPath));
         } else {
-            throw new \Exception("File {$fullPath} does not exist");
+            throw new \Exception("File {$fullPath} does not exist in local storage");
         }
     }
 
-    public function save (string $path): void {
-        copy($path, STORAGE_PATH . $path);
+    public function save (string $path, string $name): void {
+        move_uploaded_file($path, self::STORAGE_PATH . $name);
     }
 
     public function delete (string $path): void {
-        unlink(STORAGE_PATH . $path);
+        unlink(self::STORAGE_PATH . $path);
     }
 }
