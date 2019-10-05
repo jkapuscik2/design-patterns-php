@@ -6,7 +6,7 @@ class User {
 
     protected $userStorage;
 
-    public function __construct ($userStorage) {
+    public function __construct (Storage $userStorage) {
         $this->userStorage = $userStorage;
     }
 
