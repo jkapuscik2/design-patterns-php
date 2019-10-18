@@ -4,15 +4,9 @@ namespace behavioral\state;
 
 abstract class Mood {
 
-    protected $context;
+    public abstract function insult (Person $context);
 
-    public function setContext (Person $context) {
-        $this->context = $context;
-    }
+    public abstract function hug (Person $context);
 
-    public abstract function insult ();
-
-    public abstract function hug ();
-
-    public abstract function getName (string $name);
+    public abstract function getName (Person $context, string $name);
 }

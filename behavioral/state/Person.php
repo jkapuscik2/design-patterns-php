@@ -13,20 +13,19 @@ class Person {
     }
 
     public function setState (Mood $mood) {
-        $mood->setContext($this);
         $this->currentMood = $mood;
     }
 
     public function insult () {
-        $this->currentMood->insult();
+        $this->currentMood->insult($this);
     }
 
     public function getName () {
-        $this->currentMood->getName($this->name);
+        $this->currentMood->getName($this, $this->name);
     }
 
     public function hug () {
-        $this->currentMood->hug();
+        $this->currentMood->hug($this);
     }
 
     public function say (string $msg) {
