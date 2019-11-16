@@ -15,6 +15,7 @@ This project is set of simple examples of usage of different design patterns in 
 - [adapter](https://medium.com/swlh/building-cloud-storage-application-with-adapter-design-pattern-8b0105a1bda7)
 - [facade](https://medium.com/better-programming/what-is-facade-design-pattern-67cb09ce35d4)
 - [bridge](https://medium.com/better-programming/what-is-bridge-design-pattern-89bfa581fbd3)
+- [chain of responsibility](https://medium.com/@j.kapuscik2/what-is-chain-of-responsibility-design-pattern-ff4d22abd124)
 
 Following patterns have so far been described:
 
@@ -31,6 +32,7 @@ Behavioral:
 3. [State](/behavioral/state)
 4. [Strategy](/behavioral/strategy)
 5. [Template Method](/behavioral/template_method)
+6. [Chain of Responsibility](/behavioral/chain_of_responsibility)
  
 Structural:
 1. [Adapter](/structural/adapter)
