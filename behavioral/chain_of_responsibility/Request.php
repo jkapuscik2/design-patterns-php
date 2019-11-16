@@ -16,19 +16,19 @@ class Request {
         return $this->params[$name];
     }
 
-    public function getParams (): array {
+    public function getParams () {
         return $this->params;
     }
 
-    public function hasParam (string $name): bool {
+    public function hasParam (string $name) {
         return array_key_exists($name, $this->params);
     }
 
-    public function getServerParam ($name) {
+    public function getServerParam (string $name) {
         return $this->server[$name];
     }
 
-    public function hasServerParam ($name) {
+    public function hasServerParam (string $name) {
         return array_key_exists($name, $this->server);
     }
 }
