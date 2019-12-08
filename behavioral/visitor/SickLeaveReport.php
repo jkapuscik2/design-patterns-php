@@ -21,7 +21,7 @@ class SickLeaveReport implements Visitor
         $daysMissed = 0;
 
         foreach ($student->getSickLeaves() as $sickLeave) {
-            $daysMissed = $sickLeave->getStart()->diff($sickLeave->getEnd())->days;
+            $daysMissed += $sickLeave->getStart()->diff($sickLeave->getEnd())->days;
         }
 
         return "Student: {$student->getName()} missed {$daysMissed} days";
