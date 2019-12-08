@@ -14,8 +14,7 @@ $jan->addSickLeave(new \DateTime("2019-11-01"), new \DateTime("2019-11-15"));
 $ann = new Student("Ann");
 
 $university = new University("Visitor University", [$john, $jan, $ann]);
-$sickLeaveReport = new SickLeaveReport();
-$results = $sickLeaveReport->visitUniversity($university);
+$results = $university->accept(new SickLeaveReport());
 
 function show($data)
 {
