@@ -20,6 +20,7 @@ This project is set of simple examples of usage of different design patterns in 
 - [Command](https://medium.com/@j.kapuscik2/what-is-cqrs-command-design-pattern-5d400fd9f93a)
 - [Null Object](https://medium.com/@j.kapuscik2/what-is-null-object-design-pattern-f3b4d3d28636)
 - [Fluent Interface](https://medium.com/@j.kapuscik2/what-is-the-fluent-interface-design-pattern-2797645b2a2e)
+- [Specification](https://medium.com/@j.kapuscik2/what-is-the-specification-design-pattern-4051dd9e71c3)
 
 ### Following patterns have so far been described:
 
@@ -40,6 +41,7 @@ This project is set of simple examples of usage of different design patterns in 
 7. [Visitor](/behavioral/Visitor)
 8. [Command](/behavioral/Command)
 9. [Null Object](/behavioral/NullObject)
+10. [Specification](/behavioral/Specification)
 
 #### Structural:
 1. [Adapter](/structural/Adapter)
