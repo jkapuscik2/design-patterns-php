@@ -1,8 +1,8 @@
 ## Design Patterns
 
 This project is set of simple examples of usage of different design patterns in a real world scenarios. Each one have a short description and guideline:
-- [Intro](https://medium.com/@j.kapuscik2/getting-started-with-design-patterns-in-php-4d451ccdfb71)
-- [Creation Patterns](https://medium.com/@j.kapuscik2/creational-design-patterns-in-php-db365d3245ce)
+- [Factory Method](https://medium.com/@j.kapuscik2/getting-started-with-design-patterns-in-php-4d451ccdfb71)
+- [Creational Patterns](https://medium.com/@j.kapuscik2/creational-design-patterns-in-php-db365d3245ce)
 - [Observer](https://medium.com/@j.kapuscik2/observer-pattern-in-php-2ba240f89fb2)
 - [Iterator](https://medium.com/@j.kapuscik2/iterator-pattern-in-php-b7624f6bdbcf) 
 - [State & Strategy](https://medium.com/@j.kapuscik2/state-strategy-design-patterns-by-example-f57ebd7b6211) 
