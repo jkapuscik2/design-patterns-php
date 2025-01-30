@@ -4,5 +4,5 @@ namespace App\Structural\DependencyInjection;
 
 interface Storage
 {
-    public function save($email, $password): bool ;
+    public function save(string $email, string $password): bool ;
 }
