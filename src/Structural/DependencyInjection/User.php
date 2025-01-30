@@ -4,16 +4,13 @@ namespace App\Structural\DependencyInjection;
 
 class User
 {
-    protected Storage $userStorage;
-
-    public function __construct(Storage $userStorage)
+    public function __construct(private Storage $userStorage)
     {
-        $this->userStorage = $userStorage;
     }
 
-    protected function validate($email, $password): bool
+    protected function validate(string $email, string $password): bool
     {
-        if (strlen($email) > 3 && strlen($password) > 3) {
+        if (mb_strlen($email) > 3 && mb_strlen($password) > 3) {
             return true;
         } else {
             return false;
