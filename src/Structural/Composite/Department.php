@@ -7,12 +7,10 @@ use SplObjectStorage;
 final class Department implements BudgetedComposite
 {
     private SplObjectStorage $dependencies;
-    private string $name;
 
-    public function __construct(string $name)
+    public function __construct(private string $name)
     {
         $this->dependencies = new SplObjectStorage();
-        $this->name = $name;
     }
 
     public function calculateBudget(): int
