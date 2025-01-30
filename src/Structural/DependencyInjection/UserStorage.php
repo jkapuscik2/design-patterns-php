@@ -9,7 +9,7 @@ class UserStorage implements Storage
         echo "Making connection to DB" . PHP_EOL;
     }
 
-    public function save($email, $password): bool
+    public function save(string $email, string $password): bool
     {
         $this->connectDb();
         echo "Inserting new user record with email: {$email} and password {$password}";
