@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Structural\Decorator;
 
@@ -13,7 +14,7 @@ final class WinterSale extends ProductDecorator
 
     public function getPrice(): int
     {
-        return round($this->product->getPrice() * self::DISCOUNT_FACTOR);
+        return intval(round($this->product->getPrice() * self::DISCOUNT_FACTOR));
     }
 
 }

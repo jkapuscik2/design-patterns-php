@@ -1,10 +1,11 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Creational\FactoryMethod;
 
 abstract class Box
 {
-    protected $file;
+    protected FileItem $file;
 
     public function __construct(FileItem $file)
     {

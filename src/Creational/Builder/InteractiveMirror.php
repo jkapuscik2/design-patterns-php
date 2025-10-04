@@ -1,10 +1,11 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Creational\Builder;
 
 final class InteractiveMirror implements Device
 {
-    private array $hardware;
+    private array $hardware = [];
     private string $software;
     private string $SLA;
 

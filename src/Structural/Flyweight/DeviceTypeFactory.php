@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Structural\Flyweight;
 
@@ -20,14 +21,14 @@ final class DeviceTypeFactory
             $operatingSystem
         );
 
-//        if (!array_key_exists($key, $this->deviceTypes)) {
+       if (!array_key_exists($key, $this->deviceTypes)) {
             $this->deviceTypes[$key] = new DeviceType(
                 $location,
                 $resolution,
                 $producer,
                 $operatingSystem
             );
-//        }
+       }
 
         return $this->deviceTypes[$key];
     }

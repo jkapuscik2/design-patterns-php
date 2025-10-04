@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Structural\Decorator;
 
@@ -17,6 +18,6 @@ final readonly class TV implements Product
 
     public function getPrice(): int
     {
-        return round($this->price * self::TAX_RATE);
+        return intval(round($this->price * self::TAX_RATE));
     }
 }

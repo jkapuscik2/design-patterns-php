@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Behavioral\Observer;
 
@@ -17,5 +18,5 @@ $software = new Employee("Ben", "ben@gmail.com");
 $hr->inform("New employee: " . $software->getName());
 $hr->employ($software);
 
-$hr->layOf($software);
+$hr->layOff($software);
 $hr->inform("Employee was laid off: " . $software->getName());

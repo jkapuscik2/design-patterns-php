@@ -1,20 +1,17 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Creational\FactoryMethod;
 
 final readonly class FileItem
 {
-    public const TYPE_IMG = 'image';
-    public const TYPE_VIDEO = 'video';
-    public const TYPE_AUDIO = 'audio';
-
     public function __construct(
-        private string $type,
+        private FileType $type,
         private string $filePath
     ) {
     }
 
-    public function getType(): string
+    public function getType(): FileType
     {
         return $this->type;
     }

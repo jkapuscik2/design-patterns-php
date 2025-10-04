@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Structural\Facade;
 
@@ -23,7 +24,7 @@ class Image
         $fileInfo = new SplFileInfo($filePath);
         $thumbPath = $fileInfo->getBasename('.' . $fileInfo->getExtension()) . '_thumb' . "." . $fileInfo->getExtension();
 
-        if (file_put_contents($thumbPath, $this->imagick)) {
+        if (file_put_contents($thumbPath, (string) $this->imagick)) {
             return true;
         } else {
             throw new \RuntimeException("Could not create thumbnail.");

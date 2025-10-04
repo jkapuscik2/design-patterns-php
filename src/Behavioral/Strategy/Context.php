@@ -1,19 +1,12 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Behavioral\Strategy;
 
 class Context
 {
-    private OutputFormatter $formatter;
-
-    public function __construct(string $outputType)
+    public function __construct(private readonly OutputFormatter $formatter)
     {
-        $this->formatter = match ($outputType) {
-            "json" => new JSONFormatter(),
-            "xml" => new XMLFormatter(),
-            "string" => new StringFormatter(),
-            default => throw new \InvalidArgumentException("{$outputType} is not supported"),
-        };
     }
 
     public function formatData(array $data): string

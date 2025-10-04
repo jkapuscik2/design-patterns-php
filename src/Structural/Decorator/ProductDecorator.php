@@ -1,14 +1,12 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Structural\Decorator;
 
 abstract class ProductDecorator implements Product
 {
-    protected Product $product;
-
-    public function __construct(Product $product)
+    public function __construct(protected readonly Product $product)
     {
-        $this->product = $product;
     }
 
     abstract public function getName(): string;

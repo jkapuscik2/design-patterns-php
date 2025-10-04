@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Creational\Singleton;
 
@@ -17,17 +18,21 @@ final class ActiveUser
     {
     }
 
-    public function setName(string $email): void
+    private function __wakeup(): void
+    {
+    }
+
+    public function setEmail(string $email): void
     {
         $this->email = $email;
     }
 
-    public function changeEmail(): string
+    public function getEmail(): string
     {
         return $this->email;
     }
 
-    public static function getInstance(): ActiveUser
+    public static function getInstance(): self
     {
         if (!self::$instance) {
             self::$instance = new ActiveUser();

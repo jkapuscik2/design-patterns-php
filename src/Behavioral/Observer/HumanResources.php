@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Behavioral\Observer;
 
@@ -20,7 +21,7 @@ final class HumanResources
         $this->communicator->inform($message);
     }
 
-    public function layOf(Employee $employee): void
+    public function layOff(Employee $employee): void
     {
         $this->communicator->detach($employee);
     }

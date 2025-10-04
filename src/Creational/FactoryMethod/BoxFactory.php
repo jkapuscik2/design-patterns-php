@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Creational\FactoryMethod;
 
@@ -9,10 +10,9 @@ class BoxFactory implements Factory
     public static function createBox(FileItem $item): Box
     {
         return match ($item->getType()) {
-            FileItem::TYPE_IMG => new ImgBox($item),
-            FileItem::TYPE_VIDEO => new VideoBox($item),
-            FileItem::TYPE_AUDIO => new AudioBox($item),
-            default => throw new InvalidArgumentException("Wrong file type provided: {$item->getType()}"),
+            FileType::Image => new ImgBox($item),
+            FileType::Video => new VideoBox($item),
+            FileType::Audio => new AudioBox($item),
         };
     }
 }

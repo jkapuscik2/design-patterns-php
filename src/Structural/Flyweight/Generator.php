@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Structural\Flyweight;
 
@@ -27,7 +28,7 @@ class Generator
 
     protected function generateRandomString(int $length): string
     {
-        return substr(str_shuffle(str_repeat($x = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length / strlen($x)))), 1, $length);
+        return substr(str_shuffle(str_repeat($x = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', intval(ceil($length / strlen($x))))), 1, $length);
     }
 
     protected function getRand(array $arr): string

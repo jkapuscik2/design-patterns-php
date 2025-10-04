@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Structural\Adapter;
 
@@ -22,11 +23,17 @@ class LocalFileStorage implements FileAdapter
 
     public function save(string $path, string $name): void
     {
-        move_uploaded_file($path, self::STORAGE_PATH . $name);
+        $contents = file_get_contents($path);
+        if ($contents === false) {
+            throw new \RuntimeException("Failed to read source file: {$path}");
+        }
+        if (@file_put_contents(self::STORAGE_PATH . $name, $contents) === false) {
+            throw new \RuntimeException("Failed to write file: " . self::STORAGE_PATH . $name);
+        }
     }
 
     public function delete(string $path): bool
     {
-        return unlink(self::STORAGE_PATH . $path);
+        return @unlink(self::STORAGE_PATH . $path);
     }
 }

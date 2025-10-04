@@ -1,10 +1,11 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Structural\Proxy;
 
 class User
 {
-    public function login($name): void
+    public function login(string $name): void
     {
         echo "Logging in as {$name}" . PHP_EOL;
         $_SESSION["username"] = $name;

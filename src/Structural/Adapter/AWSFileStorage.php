@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Structural\Adapter;
 
@@ -44,7 +45,7 @@ class AWSFileStorage implements FileAdapter
         $this->client->putObject([
             'Bucket' => $this->bucket,
             'Key' => $name,
-            'Body' => file_get_contents($path, "r")
+            'Body' => file_get_contents($path)
         ]);
     }
 
